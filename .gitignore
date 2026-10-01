@@ -1,0 +1,27 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# LTspice simulation outputs (keep schematics .asc and symbols .asy)
+*.raw
+*.log
+*.net
+*.op.raw
+
+# MATLAB temporary files
+*.asv
+*.m~
+.matlab/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+[Dd]esktop.ini
+
+# Environment / local configs
+.env
+.venv/
+env/
+venv/
