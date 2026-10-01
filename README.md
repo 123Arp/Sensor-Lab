@@ -134,7 +134,7 @@ Sensor-Lab/
   * DC offset trimming to shift the amplified voltage within the readable $0\text{--}5\text{ V}$ input range of the ADALM1000 ADC.
   * Feedback capacitor limits amplifier bandwidth to $f_c < 10\text{ Hz}$ to eliminate high-frequency electromagnetic noise.
 * **Heading Angle Determination:**
-  $$\theta = \operatorname{atan2}\left(V_{out\_y} - V_{offset\_y},\, V_{out\_x} - V_{offset\_x}\right) \times \frac{180^\circ}{\pi}$$
+  $$\theta = \text{atan2}\left(V_{out\_y} - V_{offset\_y},\, V_{out\_x} - V_{offset\_x}\right) \times \frac{180^\circ}{\pi}$$
 * **Simulation & Hardware Results:**
   * **LTspice Simulation (`24F1100064_Week 3.asc`):** Modeled Hall sensor outputs with dual parametric voltage sweeps:
     `.step param X 2.4986 2.5014 0.00014` and `.step param Y 2.5014 2.4986 -0.00014`.
@@ -163,7 +163,7 @@ Sensor-Lab/
      * Peak threshold: $h_{min} \ge 1.05\text{ g}$
      * Minimum distance: $d_{min} \ge 20\text{ samples}$ (refractory footfall period)
   4. **Cadence & Step Frequency:**
-     $$\Delta t_{step} = \operatorname{mean}\left(\operatorname{diff}(t_{peaks})\right), \quad f_{step} = \frac{1}{\Delta t_{step}} \text{ (steps/s)}$$
+     $$\Delta t_{step} = \text{mean}\left(\text{diff}(t_{peaks})\right), \quad f_{step} = \frac{1}{\Delta t_{step}} \text{ (steps/s)}$$
   5. **Activity Classification:**
      * $f_{step} > 2.0\text{ Hz} \implies$ **Running**
      * $1.5\text{ Hz} < f_{step} \le 2.0\text{ Hz} \implies$ **Climbing Stairs**
